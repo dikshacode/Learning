@@ -1,0 +1,29 @@
+package Tree;
+
+public class InvertTree {
+public static void main(String[] args){
+    TreeNode root = new TreeNode(4);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(7);
+
+    root.left.left = new TreeNode(1);
+    root.left.right = new TreeNode(3);
+
+    root.right.left = new TreeNode(6);
+    root.right.right = new TreeNode(9);
+    System.out.println(invertTree(root));
+}
+    public static TreeNode invertTree(TreeNode root) {
+        if(root==null)
+            return null;
+        TreeNode left = invertTree(root.left);
+        if(left!=null)
+        System.out.println(left.val);
+        TreeNode right = invertTree(root.right);
+        if(right!=null)
+        System.out.println(right.val);
+        root.right = left;
+        root.left = right;
+        return root;
+    }
+}

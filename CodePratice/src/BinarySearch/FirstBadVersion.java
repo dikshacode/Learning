@@ -1,0 +1,8 @@
+package BinarySearch;
+
+public class FirstBadVersion {
+
+    public static void main(String[] args){
+
+    }
+}
