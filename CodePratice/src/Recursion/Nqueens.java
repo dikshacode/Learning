@@ -43,8 +43,12 @@ public class Nqueens {
     }
     private static boolean isSafe(char[][] board, int row, int col, int n){
         // check column
-        for (int i = 0; i < row; i++) {
-            if (board[i][col] == 'Q') return false;
+        for (int i = 0; i < n; i++) {
+            if (board[row][i] == 'Q') return false;
+        }
+
+        for (int j = 0; j < n; j++) {
+            if (board[j][col] == 'Q') return false;
         }
 
         // check upper-left diagonal
