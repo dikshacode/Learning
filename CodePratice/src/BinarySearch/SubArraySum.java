@@ -21,7 +21,7 @@ public class SubArraySum {
         int[] prefixSum = new int[arr.length];
         prefixSum[0] = arr[0];
         for(int i=1;i<=k;i++){
-            prefixSum[i] = prefixSum[i-1] + arr[i];
+                prefixSum[i] = prefixSum[i-1] + arr[i];
         }
         if(prefixSum[k] <= b) {
             return true;
@@ -31,6 +31,6 @@ public class SubArraySum {
     public static void main(String[] args){
         int[] arr = {1,2,3,4,5,6,7,8};
         int b = 20;
-        findCountOfSunArray(arr,b);
+        System.out.println(findCountOfSunArray(arr,b));
     }
 }

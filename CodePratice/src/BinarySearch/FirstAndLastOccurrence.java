@@ -37,6 +37,6 @@ public class FirstAndLastOccurrence {
     public static void main(String[] args){
         int[] arr = {5,7,7,8,8,10};
         int target = 8;
-        System.out.println(findOccurence(arr,target).toString());
+        System.out.println(findOccurence(arr,target));
     }
 }
